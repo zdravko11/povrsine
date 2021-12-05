@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="a" value="0">
+    <button onclick="myFunction()">izracunaj</button>
+    <a href="index1.html">Povratak</a>
+
+    <p id="rezultat"></p>
+    <canvas id="myCanvas"></canvas>
+    <script>
+     function myFunction() {
+  var x = document.getElementById("a").value;
+
+  document.getElementById("rezultat").innerHTML = x * x * Math.PI;
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(100,75,x*2,0*Math.PI,2*Math.PI);
+ctx.stroke();
+}
+    </script>
+</body>
+</html>
